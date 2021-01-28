@@ -1,0 +1,348 @@
+{
+	"id": "b30a53e8-7446-bc24-7c1e-7163d653945a",
+	"name": "gimnasio",
+	"description": "pruebas de gimnasio",
+	"order": [
+		"9bf4c869-0ae5-e9a3-f70e-4927210fb982",
+		"2cb9448a-fc43-6ba1-0f4c-387b8b32b1f1",
+		"d5e41107-8694-9987-29ec-6f122127622e",
+		"390faa39-d708-7ad5-0816-0338b8dd3401",
+		"dee4f897-82b2-5ca0-290c-d99c2d5ef9b7",
+		"c1c30449-987a-ae90-8648-47d298911bc5"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1611844906048,
+	"owner": "8067818",
+	"public": false,
+	"requests": [
+		{
+			"id": "2cb9448a-fc43-6ba1-0f4c-387b8b32b1f1",
+			"headers": "//authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/usuario/auth",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "identificacion",
+					"value": "12345",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "identificacion",
+					"value": "12345",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611846389650,
+			"name": "auntenticar usuario",
+			"description": "",
+			"collectionId": "b30a53e8-7446-bc24-7c1e-7163d653945a",
+			"responses": []
+		},
+		{
+			"id": "390faa39-d708-7ad5-0816-0338b8dd3401",
+			"headers": "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM\n//Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:3000/usuario/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "nombres",
+					"value": "pepito",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id_sede",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apellidos",
+					"value": "perez",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id_perfil",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "identificacion",
+					"value": "10001",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "contrasena",
+					"value": "12345",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611849928263,
+			"name": "registro usuario",
+			"description": "",
+			"collectionId": "b30a53e8-7446-bc24-7c1e-7163d653945a",
+			"responses": []
+		},
+		{
+			"id": "9bf4c869-0ae5-e9a3-f70e-4927210fb982",
+			"headers": "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/ciudad/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611845497460,
+			"name": "pruebas autorización",
+			"description": "",
+			"collectionId": "b30a53e8-7446-bc24-7c1e-7163d653945a",
+			"responses": []
+		},
+		{
+			"id": "c1c30449-987a-ae90-8648-47d298911bc5",
+			"headers": "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM\n//Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:3000/usuario/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "nombres",
+					"value": "pepito",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id_sede",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "apellidos",
+					"value": "perez",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id_perfil",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "identificacion",
+					"value": "10001",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "contrasena",
+					"value": "12345",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611849928263,
+			"name": "registro usuario por sedes",
+			"description": "",
+			"collectionId": "b30a53e8-7446-bc24-7c1e-7163d653945a",
+			"responses": []
+		},
+		{
+			"id": "d5e41107-8694-9987-29ec-6f122127622e",
+			"headers": "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM\n//Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:3000/ciudad/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "nombre",
+					"value": "Barranquilla",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611847781349,
+			"name": "registro ciudad",
+			"description": "",
+			"collectionId": "b30a53e8-7446-bc24-7c1e-7163d653945a",
+			"responses": []
+		},
+		{
+			"id": "dee4f897-82b2-5ca0-290c-d99c2d5ef9b7",
+			"headers": "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM\n//Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTE4NDU0ODAsImV4cCI6MTYxMTkzMTg4MH0.bTMTbCkBrcQLfg54QiYrCm46CwFQEHH8qS9w_f5OIRM",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:3000/sede/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "nombre",
+					"value": "1 de mayo - sede ",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id_ciudad",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611849834608,
+			"name": "registro sede",
+			"description": "",
+			"collectionId": "b30a53e8-7446-bc24-7c1e-7163d653945a",
+			"responses": []
+		}
+	]
+}

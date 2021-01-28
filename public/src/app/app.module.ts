@@ -6,11 +6,10 @@ import { RolPipe } from './pipes/rol.pipe';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './interceptors/http.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminComponent } from './templates/admin/admin.component';
 import { AdminModule } from './templates/admin/admin.module';
-import { LoginComponent } from './templates/login/login.component';
 import { LoginModule } from './templates/login/login.module';
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserModule,
     LoginModule,
+  
     FormsModule,
     AdminModule,
     AppRoutingModule,

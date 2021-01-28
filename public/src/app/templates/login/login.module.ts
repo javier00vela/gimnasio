@@ -5,7 +5,7 @@ import {MatButtonModule } from '@angular/material/button';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { LoginComponent } from './login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     AppRoutingModule,
     AdminComponentsModule

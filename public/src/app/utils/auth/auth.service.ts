@@ -8,18 +8,20 @@ import * as moment from "moment";
 export class AuthService {
 
     public static setSession(authResult : any) {
-        const expiresAt = moment().add(authResult.data.expiresIn,'second');
-        localStorage.setItem('id_token', authResult.data.idToken);
+        console.log(authResult);
+        
+        const expiresAt = moment().add(authResult.expiresIn,'second');
+        localStorage.setItem('token', authResult.token);
         localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
     }    
     
     public isAuthed(){
-        const token = localStorage.getItem('id_token');
+        const token = localStorage.getItem('token');
        return ( token !== null && token !== undefined && token !== '' ? true : false );
     }
 
     public  logout(callaback: ()=> void) {
-        localStorage.removeItem("id_token");
+        localStorage.removeItem("token");
         localStorage.removeItem("expires_at");
         callaback();
     }

@@ -10,8 +10,8 @@ import { CrudService } from 'src/app/services/_general_/crud.service';
 export class CiudadRestService extends CrudService{
 
   private table = 'ciudad';
-  constructor(protected http : HttpClient  ) { 
-    super(http);
+  constructor(protected http : HttpClient ) { 
+    super(http );
   }
 
   public allCiudads(){

@@ -3,14 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IUsuario } from 'src/app/interfaces/usuario.interface';
 import { CrudService } from 'src/app/services/_general_/crud.service';
-
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioRestService extends CrudService{
 
   private table = 'usuario';
-  constructor(protected http : HttpClient  ) { 
+  constructor(protected http : HttpClient) { 
     super(http);
   }
 
@@ -27,7 +26,7 @@ export class UsuarioRestService extends CrudService{
   }
 
   public authUsuario(usuario:IUsuario){
-    return this.post(`${this.table}/`,usuario);
+    return this.post(`${this.table}/auth`,usuario);
   }
 
   

@@ -1,1 +1,14 @@
-<p>ciudad works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <h1 class="text-center">Registrar Ciudad</h1>
+    <div class="form-group">
+        <label>Nombre Ciudad</label>
+        <input type="text" formControlName="nombre" class="form-control">
+        <div class="error" *ngIf="form.get('nombre').hasError('required') && form.get('nombre').touched">
+            Nombre requerido
+        </div>
+    </div>
+
+    <div class="form-group col-12">
+        <button type="submit" class="btn btn-block btn-success">Enviar</button>
+    </div>
+</form>
