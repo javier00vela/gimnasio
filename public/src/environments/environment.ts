@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
   router : {
-    back : "https://localhost:3000/"
+    back : "http://localhost:3000"
   }
 };
 

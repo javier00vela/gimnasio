@@ -11,8 +11,10 @@ export class UsuarioUtilsService {
   constructor(private _usuarioRestService : UsuarioRestService ) { }
 
 
-  public authPerson(usuario :IUsuario){
+  public authPerson(usuario :any){
     this._usuarioRestService.authUsuario(usuario).subscribe(data => {
+      console.log(data);
+      
       AuthService.setSession(data)
     })
   }

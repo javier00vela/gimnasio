@@ -10,6 +10,7 @@ import { AdminComponent } from './templates/admin/admin.component';
 import { AdminModule } from './templates/admin/admin.module';
 import { LoginComponent } from './templates/login/login.component';
 import { LoginModule } from './templates/login/login.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoginModule } from './templates/login/login.module';
     HttpClientModule,
     BrowserModule,
     LoginModule,
+    FormsModule,
     AdminModule,
     AppRoutingModule,
     BrowserAnimationsModule

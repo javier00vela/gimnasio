@@ -1,3 +1,5 @@
 <label >Cedula</label>
-<input type="text"  >
-<button>Ingresar</button>
+<input type="text"  [(ngModel)]="usuario.identificacion"  >
+<label >Contraseña</label>
+<input type="text"  [(ngModel)]="usuario.contrasena"  >
+<button (click)="enviar()">Ingresar</button>

@@ -27,7 +27,7 @@ export class UsuarioRestService extends CrudService{
   }
 
   public authUsuario(usuario:IUsuario){
-    return this.post(`${this.table}/auth`,usuario);
+    return this.post(`${this.table}/`,usuario);
   }
 
   
