@@ -25,6 +25,14 @@ pasos para desplegar la aplicacion :
 6.Se ejecutara en el navegador la aplicación.
 
 
+-----------------
+NOTA: para el despliegue de pruebas unitarias con JEST , ingresar a la carpeta /server y ejecutar el siguiente comando:
+
+`npm test`
+
+NOTA: Ingresar a postman e importar el archivo `gimnasio.postman_collection.json` de la carpeta /docs.
+
+
 
 
 
