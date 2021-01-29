@@ -10,11 +10,11 @@ pasos para desplegar la aplicacion :
 2.Importar el archivo .sql que se encuentra en la carpeta docs/db.sql con su cliente de base de datos MYSQL de manera local.
 
 
-3.Descargar las dependencias tanto de la carpeta /api y /public con el siguiente comando:  
+3.Descargar las dependencias tanto de la carpeta /server y /public con el siguiente comando:  
 
 `npm install`
 
-4.Ejecute el siguiente comando dentro de la carpeta /api :
+4.Ejecute el siguiente comando dentro de la carpeta /server :
 
 `npm start`
 
