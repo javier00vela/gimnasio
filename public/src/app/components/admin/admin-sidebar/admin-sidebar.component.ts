@@ -15,10 +15,7 @@ export class AdminSidebarComponent implements OnInit {
   }
 
   public logOut(){
-  
-    
     this.auth.logout(()=>{
-      console.log("click event");
       this.router.navigate(["login"]);
     })
   }

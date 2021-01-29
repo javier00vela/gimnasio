@@ -1,10 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; 
+    background: rgb(240, 239, 239);
+}
 
 .header{
     height: 100%;
     width: 100%;
+   
+}
+
+
+.error{
+    color:red;
 }
 
 .text-center{

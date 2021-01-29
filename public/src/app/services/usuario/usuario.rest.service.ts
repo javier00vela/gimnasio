@@ -29,6 +29,10 @@ export class UsuarioRestService extends CrudService{
     return this.post(`${this.table}/auth`,usuario);
   }
 
+  public sedeByUsuario(id:number){
+    return this.getById(`${this.table}/sedes`,id);
+  }
+
   
 
   // public auth(){

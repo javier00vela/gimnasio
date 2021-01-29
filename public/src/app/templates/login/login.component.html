@@ -1,58 +1,124 @@
-<div class="login">
-    <h1 class="text-center">Login</h1>
-    <form [formGroup]="loginForm" (ngSubmit)="enviarLogin(loginForm)">
-        <div class="form-group">
-            <label>Cedula</label>
-            <input type="text" class="form-control" formControlName="identificacion" >
-        </div>
-       
-        <div class="form-group">
-            <label>Contraseña</label>
-            <input type="password" class="form-control" formControlName="contrasena" >
-        </div>
-      
-        <button type="submit" class="btn btn-block btn-primary">Ingresar</button>
-    </form>
+
+<div class="container ">
+    <h1 class="text-center">Prueba gimnasio</h1>
 </div>
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5 card">
 
-<div class="login">
-    <h1 class="text-center">Registro</h1>
-    <form [formGroup]="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
-      
+            <div class="login">
+                <h1 class="text-center">Login</h1>
+                <form [formGroup]="loginForm" (ngSubmit)="enviarLogin(loginForm)">
+                    <div class="form-group">
+                        <label>Cedula</label>
+                        <input type="text" class="form-control" formControlName="identificacion" placeholder="identificación">
+                        <div class="error"
+                            *ngIf="loginForm.get('identificacion').hasError('required') && loginForm.get('identificacion').touched">
+                            Identificación requerida
+                        </div>
+                    </div>
 
-        <div class="form-group">
-            <label>Nombres</label>
-            <input type="text" class="form-control" formControlName="nombres" >
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" placeholder="contraseña" class="form-control" formControlName="contrasena">
+                        <div class="error"
+                            *ngIf="loginForm.get('contrasena').hasError('required') && loginForm.get('contrasena').touched">
+                            Contraseña requerida
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-block btn-primary">Ingresar</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-6 card">
+            <div class="login">
+                <h1 class="text-center">Registro</h1>
+                <form [formGroup]="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
+
+
+                    <div class="form-group">
+                        <label>Nombres</label>
+                        <input type="text" placeholder="nombres" class="form-control" formControlName="nombres">
+                        <div class="error"
+                            *ngIf="registroForm.get('nombres').hasError('required') && registroForm.get('nombres').touched">
+                            Nombres requerido
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" placeholder="apellidos" class="form-control" formControlName="apellidos">
+                        <div class="error"
+                            *ngIf="registroForm.get('apellidos').hasError('required') && registroForm.get('apellidos').touched">
+                            Apellidos requerido
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ciudad</label>
+                        <select type="text" placeholder="ciudad" class="form-control" formControlName="id_ciudad">
+                            <option *ngFor="let ciudad of listaCiudades | async " [value]="ciudad.id">{{ ciudad.nombre
+                                }}
+                            </option>
+                        </select>
+                        <div class="error"
+                            *ngIf="registroForm.get('id_ciudad').hasError('required') && registroForm.get('id_ciudad').touched">
+                            ciudad requerida
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>sede</label>
+                        <select type="text" placeholder="sede" class="form-control" formControlName="id_sede">
+                            <option *ngFor="let sede of listaSedes | async " [value]="sede.id">{{ sede.nombre }}
+                            </option>
+                        </select>
+                        <div class="error"
+                            *ngIf="registroForm.get('id_sede').hasError('required') && registroForm.get('id_sede').touched">
+                            sede requerida
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>rol</label>
+                        <select type="text" class="form-control" formControlName="id_perfil">
+                            <option value="1">Administrador</option>
+                            <option value="2">Usuario</option>
+                        </select>
+                        <div class="error"
+                            *ngIf="registroForm.get('id_sede').hasError('required') && registroForm.get('id_sede').touched">
+                            rol requerido
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>identificación</label>
+                        <input placeholder="identificación" type="text" class="form-control" formControlName="identificacion">
+                        <div class="error"
+                            *ngIf="registroForm.get('identificacion').hasError('required') && registroForm.get('identificacion').touched">
+                            identificación requerida
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input  placeholder="contraseña" type="password" class="form-control" formControlName="contrasena">
+                        <div class="error"
+                            *ngIf="registroForm.get('contrasena').hasError('required') && registroForm.get('contrasena').touched">
+                            contraseña requerida
+                        </div>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-block btn-primary">Registrar</button>
+                </form>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label>Apellidos</label>
-            <input type="text" class="form-control" formControlName="apellidos" >
-        </div>
-
-        <div class="form-group">
-            <label>ciudad</label>
-            <select type="text" class="form-control" formControlName="id_ciudad" ></select>
-        </div>
-
-        <div class="form-group">
-            <label>sede</label>
-            <select type="text" class="form-control" formControlName="id_sede" ></select>
-        </div>
-
-
-        <div class="form-group">
-            <label>identificación</label>
-            <input type="text" class="form-control" formControlName="identificacion" >
-        </div>
-
-        <div class="form-group">
-            <label>Contraseña</label>
-            <input type="password" class="form-control" formControlName="contrasena" >
-        </div>
-
-
-      
-        <button type="submit" class="btn btn-block btn-primary">Registrar</button>
-    </form>
+    </div>
 </div>

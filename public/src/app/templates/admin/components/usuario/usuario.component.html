@@ -1,11 +1,10 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+
     <h1 class="text-center">Registrar Sede</h1>
     <div class="form-group">
         <label>Lista Sede</label>
-        <select  formControlName="id_ciudad" class="form-control"></select>
-        <div class="error" *ngIf="form.get('id_ciudad').hasError('required') && form.get('id_ciudad').touched">
-            Ciudad requerido
-        </div>
+        <select  [(ngModel)]="id_ciudad" class="form-control" (change)="getListSedesaByUsuario($event.target.value)" >
+            <option *ngFor="let sede of listaSedes | async " [value]="sede.id">{{ sede.nombre }}</option>
+        </select>
     </div>
 
     <div class="w-100  table-response">
@@ -14,11 +13,18 @@
                 <tr>
                     <td>Nombre</td>
                     <td>Cedula</td>
+                    <td>Ciudad</td>
                     <td>Sede</td>
                 </tr>
             </thead>
             <tbody>
-                
+                <tr *ngFor="let sede of listSedesUser | async">
+                    <td>{{ sede.nombres }}</td>
+                    <td>{{ sede.identificacion }}</td>
+                    <td>{{ sede.ciudad }}</td>
+                    <td>{{ sede.sede }}</td>
+                    <td></td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -26,4 +32,3 @@
     <div class="form-group col-12">
         <button type="submit" class="btn btn-block btn-success">Enviar</button>
     </div>
-</form>

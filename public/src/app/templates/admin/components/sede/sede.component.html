@@ -10,7 +10,9 @@
 
     <div class="form-group">
         <label>Lista Ciudad</label>
-        <select  formControlName="id_ciudad" class="form-control"></select>
+        <select  formControlName="id_ciudad" class="form-control">
+            <option *ngFor="let ciudad of listaCiudades | async " [value]="ciudad.id">{{ ciudad.nombre }}</option>
+        </select>
         <div class="error" *ngIf="form.get('id_ciudad').hasError('required') && form.get('id_ciudad').touched">
             Ciudad requerido
         </div>

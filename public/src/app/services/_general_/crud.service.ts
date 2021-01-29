@@ -32,26 +32,23 @@ export class CrudService {
   }
 
 
-  protected get(route: string): Observable<IResponse<[]>> {
-    return this.http.get(`${environment.router.back}/${route}`).pipe(map((data: any) => data.data));
+  protected get(route: string): Observable<any> {
+    return this.http.get(`${environment.router.back}/${route}`).pipe(map((data: any) => data));
   }
 
-  protected getById(route: string, id: number): Observable<IResponse<Object | JSON>> {
-    return this.http.get(`${environment.router.back}/${route}/${id}`).pipe(map((data: any) => data));
+  protected getById(route: string, id: number): Observable<any> {
+    return this.http.get(`${environment.router.back}/${route}/${id}`);
   }
 
-  protected post(route: string, data: JSON | Object | []): Observable<IResponse<Object | JSON>> {
-    return this.http.post(`${environment.router.back}/${route}`, data).pipe(map((data: any) => data), catchError((err, caught):any => {
-      Observable.throw(this.statusValidate(err.status));
-
-    }));
+  protected post(route: string, data: JSON | Object | []): Observable<any> {
+    return this.http.post(`${environment.router.back}/${route}`, data).pipe(map((data: any) => data));
   }
 
-  protected put(route: string, data: JSON | Object | []): Observable<IResponse<Object | JSON>> {
+  protected put(route: string, data: JSON | Object | []): Observable<any> {
     return this.http.put(`${environment.router.back}/${route}`, data).pipe(map((data: any) => data));
   }
 
-  protected putById(route: string, id: number, data: JSON | Object | []): Observable<IResponse<Object | JSON>> {
+  protected putById(route: string, id: number, data: JSON | Object | []): Observable<any> {
     return this.http.put(`${environment.router.back}/${route}/${id}`, data).pipe(map((data: any) => data));
   }
 

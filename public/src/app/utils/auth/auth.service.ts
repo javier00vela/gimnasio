@@ -8,8 +8,6 @@ import * as moment from "moment";
 export class AuthService {
 
     public static setSession(authResult : any) {
-        console.log(authResult);
-        
         const expiresAt = moment().add(authResult.expiresIn,'second');
         localStorage.setItem('token', authResult.token);
         localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );

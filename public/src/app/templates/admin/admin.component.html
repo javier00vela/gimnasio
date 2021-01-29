@@ -1,9 +1,6 @@
 <div class="header">
   <mat-toolbar color="primary">
     <div fxShow="true" fxHide.gt-sm="true">
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
     </div>
     
     <app-admin-header></app-admin-header>
@@ -19,8 +16,8 @@
     >
       <app-admin-sidebar></app-admin-sidebar>
     </mat-sidenav>
-    <mat-sidenav-content fxFlexFill style="padding: 15px;">
+    <div style="margin: 55px;margin-top: 10px;">
         <router-outlet></router-outlet>
-    </mat-sidenav-content>
+    </div>
   </mat-sidenav-container>
 </div>

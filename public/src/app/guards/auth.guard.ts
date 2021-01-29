@@ -11,8 +11,6 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      console.log(state.url);
-      
     if(!this.auth.isAuthed() && state.url == '/admin'){
         this.router.navigate(["login"]);
     }

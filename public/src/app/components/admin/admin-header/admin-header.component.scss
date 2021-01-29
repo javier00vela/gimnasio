@@ -1,3 +1,49 @@
-.sidebar{
-    width: 100%;
+@media(min-width:960px){
+    .sidebar{
+        width: 100%;
+    }
+
+    .primary{
+        background:rgb(241, 174, 48);
+    
+        a{
+            color: white;
+        }
+    }
+    
+    img{
+        position:absolute;
+        right: 0;
+        top: 0;
+        margin: 10px;
+    }
 }
+
+@media(max-width:960px){
+
+    .primary{
+        background:rgb(241, 174, 48);
+        height: 200px;
+        width: 100%;
+        position:absolute;
+    
+        a{
+            color: white;
+        }
+    }
+
+    .primary{
+        min-width: 500px;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    
+    img{
+        position:absolute;
+        right: 0;
+        top: 0;
+        margin: 10px;
+    }
+}
+

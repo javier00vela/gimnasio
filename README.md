@@ -1,5 +1,7 @@
 # prueba gimnasio
 
+
+
 pasos para desplegar la aplicacion : 
 
 1.Clonar el proyecto.

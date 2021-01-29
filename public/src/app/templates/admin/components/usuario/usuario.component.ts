@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { ISede } from 'src/app/interfaces/sede.interface';
+import { SedeRestService } from 'src/app/services/sede/sede.rest.service';
+import { UsuarioRestService } from 'src/app/services/usuario/usuario.rest.service';
 
 @Component({
   selector: 'app-usuario',
@@ -7,13 +11,20 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./usuario.component.scss']
 })
 export class UsuarioComponent implements OnInit {
+  public listaSedes: Observable<ISede> = new Observable<ISede>(); 
+  public listSedesUser: Observable<any> = new Observable<any>(); 
+  constructor(private _sedesServices:SedeRestService , private _usuarioServices:UsuarioRestService) { }
 
-  constructor() { }
+  public id_ciudad : number = null;
 
-  public form : FormGroup = new FormGroup({
-    nombre: new FormControl('nombre', [Validators.minLength(1) ,Validators.required] ),
-    id_ciudad: new FormControl('id_ciudad', [Validators.required] )
-  });
+  private getSedes(){
+    this.listaSedes = this._sedesServices.allSedes();
+  }
+
+  public getListSedesaByUsuario(id:number){
+    // alert(id)
+    this.listSedesUser = this._usuarioServices.sedeByUsuario(id)
+  }
 
   public onSubmit(datos:FormGroup){
     if(datos.valid){
@@ -22,6 +33,7 @@ export class UsuarioComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getSedes();
   }
 
 }

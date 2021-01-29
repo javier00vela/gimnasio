@@ -9,8 +9,7 @@ export class AuthInterceptorService implements HttpInterceptor {
   constructor() {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) : any{
-    const idToken = localStorage.getItem("id_token");
-
+    const idToken = localStorage.getItem("token");
      if (idToken) {
         const cloned = req.clone({
             headers: req.headers.set("authorization",idToken)
