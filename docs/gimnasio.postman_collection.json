@@ -48,7 +48,7 @@
 					"enabled": true
 				},
 				{
-					"key": "identificacion",
+					"key": "contrasena",
 					"value": "12345",
 					"description": "",
 					"type": "text",

@@ -1,6 +1,6 @@
 const expressJwt = require('express-jwt');
-const general = require('./../config/env');
-const env = require("./../config/env.js");
+const general = require('../config/env');
+const env = require("../config/env.js");
 module.exports = jwt;
 
 function jwt() {
