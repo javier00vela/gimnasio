@@ -9,16 +9,17 @@ pasos para desplegar la aplicacion :
 
 2.Importar el archivo .sql que se encuentra en la carpeta docs/db.sql con su cliente de base de datos MYSQL de manera local.
 
+3.Ejecute el servicio de mysql, puede ser por medio de XAMPP o directamente con el servicio:  
 
-3.Descargar las dependencias tanto de la carpeta /server y /public con el siguiente comando:  
+4.Descargar las dependencias tanto de la carpeta /server y /public con el siguiente comando:  
 
 `npm install`
 
-4.Ejecute el siguiente comando dentro de la carpeta /server :
+5.Ejecute el siguiente comando dentro de la carpeta /server :
 
 `npm start`
 
-5.Ejecute el siguiente comando dentro de la carpeta /public:
+6.Ejecute el siguiente comando dentro de la carpeta /public:
 
 `ng serve -o`
 
